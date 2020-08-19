@@ -1,5 +1,9 @@
 # Sentry client for zap logger
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/pnutmath/zapsentry)](https://goreportcard.com/report/github.com/pnutmath/zapsentry)
+[![Godoc](https://godoc.org/github.com/pnutmath/zapsentry?status.svg)](https://pkg.go.dev/github.com/pnutmath/zapsentry)
+
+
 Integration of sentry client into zap.Logger is pretty simple:
 ```golang
 func modifyToSentryLogger(log *zap.Logger, DSN string) *zap.Logger {
