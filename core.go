@@ -7,6 +7,7 @@ import (
 	"go.uber.org/zap/zapcore"
 )
 
+// NewCore creates new zapcore object
 func NewCore(cfg Configuration, factory SentryClientFactory) (zapcore.Core, error) {
 	client, err := factory()
 	if err != nil {
@@ -106,6 +107,7 @@ func (c *core) with(fs []zapcore.Field) *core {
 	}
 }
 
+// ClientGetter interface getter for sentry client
 type ClientGetter interface {
 	GetClient() *sentry.Client
 }
